@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM task</title>
+
+    <style>
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h3 {
+        visibility: hidden;
+        color: white;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h3>WOW !</h3>
+      <img src="./img/Dog_01.jpg" alt="" />
+      <button>flip me</button>
+    </div>
+
+    <script>
+      // select image, button, body, h3
+      // and save them in variables
+
+      var btn = document.querySelector("button");
+      var img = document.querySelector("img");
+      var body = document.querySelector("body");
+      var txt = document.querySelector("h3");
+
+      // add click button event listenter
+      // to run the function flip
+      btn.addEventListener("click", flip);
+
+      //flip function
+      function flip() {
+        // change the image src
+        img.src = "./img/Dog_02.jpg";
+
+        // change background color to coral
+        body.style.backgroundColor = 'coral'
+
+        // change h3 visibility to visible
+        txt.style.visibility = 'visible';
+
+        // change button text
+        btn.innerHTML = "perfect"
+      }
+    </script>
+  </body>
+</html>
